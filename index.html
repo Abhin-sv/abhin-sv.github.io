@@ -21,30 +21,59 @@
       color: #003366;
       font-size: 2.8em;
       margin-bottom: 0;
+      text-decoration: none;
     }
 
     h2 {
       color: #003366;
       margin-top: 5px;
       font-weight: 600;
-      border-top: 1.5px solid #003366;
-      border-bottom: 1.5px solid #003366;
-      padding: 6px 0;
       display: inline-block;
+      position: relative;
+      padding-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: calc(100% - 10px);
+      height: 3px;
+      background-color: #003366;
+      border-radius: 2px;
     }
 
     h3 {
       margin-top: 40px;
       color: #003366;
-      border-bottom: 3px solid #6699cc;
       display: inline-block;
+      position: relative;
       padding-bottom: 6px;
+      font-weight: 600;
+      line-height: 1.2;
+      white-space: pre-line; /* allows line breaks */
+    }
+
+    h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: calc(100% - 10px);
+      height: 2px;
+      background-color: #6699cc;
+      border-radius: 2px;
     }
 
     p {
       line-height: 1.6;
       font-size: 1.1em;
       color: #2e2e2e;
+      margin-top: 12px;
     }
 
     ul {
@@ -110,9 +139,9 @@
 
   <section>
     <h1>Abhin SV</h1>
-    <h2>DevOps Engineer</h2>
 
-    <h3>About Me</h3>
+    <h2>DevOps Engineer</h2> <br>
+     <h3>About Me</h3>
     <p>
       I'm a DevOps enthusiast with a strong foundation in Linux and Windows system administration.
       Passionate about cloud computing, automation, and streamlining software delivery. 
@@ -153,7 +182,7 @@
   <section>
     <h3>Educational Qualification</h3>
     <ul>
-       <li><strong>Network Engineering</strong> – Synnefo Solutions (2024)</li>
+      <li><strong>Network Engineering</strong> – Synnefo Solutions (2024)</li>
       <li><strong>Diploma in Computer Engineering</strong> – Govt. Polytechnic College Neyyattinkara (2023)</li>
       <li><strong>Biology Science (Higher Secondary)</strong> – Govt LVHSS Arayoor (2020)</li>
       <li><strong>SSLC</strong> – Govt VHSS Kulathoor (2018)</li>
