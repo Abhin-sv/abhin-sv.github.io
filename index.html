@@ -2,318 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhin SV | DevOps Engineer</title>
-
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papbq88jvFZTsnXhcX8HFGZHZxVo8Cj8Tz1y6QrkmZ2IwzXZR/nQb5ka4Ex3FZYXpFHKXJQQFhb2JdB4cM9xKw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
   <style>
-    /* Reset & basics */
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      color: #2e2e2e;
       margin: 0;
-      padding: 0;
-      background: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    a {
-      color: #0d47a1;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-      color: #1565c0;
-    }
-
-    /* Container */
-    .container {
+      padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
-      padding: 40px 20px 80px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #1e88e5;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    nav a {
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-    nav a:hover,
-    nav a:focus {
-      color: #bbdefb;
-    }
-
-    /* Headings */
     h1 {
-      color: #1e88e5;
-      font-size: 2.8rem;
-      margin-bottom: 0.1rem;
+      color: #0b3d91;
+      font-size: 2.8em;
+      margin-bottom: 0;
     }
+
     h2 {
-      color: #1565c0;
+      color: #00796b;
       margin-top: 5px;
       font-weight: 600;
     }
+
     h3 {
-      color: #0d47a1;
-      border-bottom: 2px solid #90caf9;
+      margin-top: 40px;
+      color: #004d40;
+      border-bottom: 3px solid #4db6ac;
       display: inline-block;
       padding-bottom: 6px;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
     }
 
-    /* Paragraph and lists */
     p {
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-      list-style-type: disc;
-      font-size: 1.1rem;
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #2e2e2e;
     }
 
-    /* Badges for skills */
+    ul {
+      padding-left: 20px;
+      line-height: 1.6;
+      color: #2e2e2e;
+    }
+
+    a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+
+    .footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
     .badge {
       display: inline-block;
-      background-color: #e3f2fd;
-      color: #0d47a1;
+      background-color: #b2dfdb;
+      color: #004d40;
       padding: 6px 14px;
-      border-radius: 20px;
-      margin: 6px 6px 6px 0;
-      font-size: 1rem;
-      user-select: none;
-      transition: background-color 0.3s;
-    }
-    .badge:hover {
-      background-color: #90caf9;
+      border-radius: 25px;
+      margin: 5px 6px 5px 0;
+      font-size: 1em;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
       cursor: default;
     }
 
-    /* Contact list with icons */
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      font-size: 1.1rem;
-    }
-    .contact-list li {
-      margin-bottom: 0.7rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .contact-list li i {
-      color: #1e88e5;
-      min-width: 18px;
-      font-size: 1.2rem;
+    .badge:hover {
+      background-color: #00796b;
+      color: #e0f2f1;
     }
 
-    /* Footer */
-    .footer {
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-      color: #777;
-      user-select: none;
+    section {
+      background-color: #e3f2fd;
+      padding: 20px 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
-    /* Download button */
-    .btn-download {
-      background: #1e88e5;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-download:hover,
-    .btn-download:focus {
-      background: #1565c0;
-      outline: none;
+    section.skills {
+      background-color: #e0f2f1;
     }
 
-    /* Dark mode styles */
-    body.dark {
-      background: #121212;
-      color: #eee;
-    }
-    body.dark a {
-      color: #90caf9;
-    }
-    body.dark a:hover,
-    body.dark a:focus {
-      color: #bbdefb;
-    }
-    body.dark nav {
-      background: #0d47a1;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-    }
-    body.dark .badge {
-      background-color: #0d47a1;
-      color: #bbdefb;
-    }
-    body.dark .badge:hover {
-      background-color: #1565c0;
-    }
-    body.dark .footer {
-      color: #bbb;
-    }
-    body.dark .btn-download {
-      background: #1565c0;
-    }
-    body.dark .btn-download:hover,
-    body.dark .btn-download:focus {
-      background: #1e88e5;
-    }
-
-    /* Dark mode toggle button */
-    #darkToggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #1e88e5;
-      border: none;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.3rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
-      z-index: 1000;
-    }
-    #darkToggle:hover,
-    #darkToggle:focus {
-      background: #1565c0;
-      outline: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      body {
-        padding: 20px 12px 70px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      .badge {
-        font-size: 0.9rem;
-        padding: 5px 10px;
-      }
-      .btn-download {
-        width: 100%;
-        text-align: center;
-      }
+    section.contact {
+      background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#learning">Currently Learning</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section>
+    <h1>Abhin SV</h1>
+    <h2>DevOps Engineer</h2>
 
-  <main class="container">
-    <header>
-      <h1>Abhin SV</h1>
-      <h2>DevOps Engineer</h2>
-    </header>
+    <h3>About Me</h3>
+    <p>
+      I'm a DevOps enthusiast with a strong foundation in Linux and Windows system administration.
+      Passionate about cloud computing, automation, and streamlining software delivery. 
+      Currently diving deep into Kubernetes, Terraform, and advanced Python to build resilient, scalable infrastructure.
+    </p>
+  </section>
 
-    <section id="about" tabindex="0">
-      <h3>About Me</h3>
-      <p>
-        I'm a DevOps enthusiast with a strong foundation in Linux and Windows system administration.
-        Passionate about cloud computing, automation, and streamlining software delivery. 
-        Currently diving deep into Kubernetes, Terraform, and advanced Python to build resilient, scalable infrastructure.
-      </p>
-      <a href="resume.pdf" class="btn-download" download>
-        <i class="fa-solid fa-download"></i> Download Resume
-      </a>
-    </section>
+  <section class="skills">
+    <h3>Technical Skills</h3>
+    <div>
+      <span class="badge">Linux</span>
+      <span class="badge">Windows Server</span>
+      <span class="badge">AWS Cloud</span>
+      <span class="badge">Docker</span>
+      <span class="badge">Kubernetes</span>
+      <span class="badge">Terraform</span>
+      <span class="badge">Ansible</span>
+      <span class="badge">Python</span>
+      <span class="badge">Bash Scripting</span>
+      <span class="badge">CI/CD (GitHub Actions, Jenkins)</span>
+      <span class="badge">Monitoring (Prometheus, Grafana)</span>
+      <span class="badge">Git & GitHub</span>
+      <span class="badge">Shell Scripting</span>
+      <span class="badge">Networking (CCNA basics)</span>
+    </div>
+  </section>
 
-    <section id="skills" tabindex="0">
-      <h3>Technical Skills</h3>
-      <div>
-        <span class="badge">Linux</span>
-        <span class="badge">Windows Server</span>
-        <span class="badge">AWS Cloud</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Kubernetes</span>
-        <span class="badge">Terraform</span>
-        <span class="badge">Ansible</span>
-        <span class="badge">Python</span>
-        <span class="badge">Bash Scripting</span>
-        <span class="badge">CI/CD (GitHub Actions, Jenkins)</span>
-        <span class="badge">Monitoring (Prometheus, Grafana)</span>
-        <span class="badge">Git & GitHub</span>
-        <span class="badge">Shell Scripting</span>
-        <span class="badge">Networking (CCNA basics)</span>
-      </div>
-    </section>
+  <section>
+    <h3>Currently Learning</h3>
+    <ul>
+      <li>Advanced Kubernetes concepts</li>
+      <li>Infrastructure as Code using Terraform</li>
+      <li>Python scripting for automation</li>
+      <li>Cloud-native CI/CD workflows</li>
+    </ul>
+  </section>
 
-    <section id="learning" tabindex="0">
-      <h3>Currently Learning</h3>
-      <ul>
-        <li>Advanced Kubernetes concepts</li>
-        <li>Infrastructure as Code using Terraform</li>
-        <li>Python scripting for automation</li>
-        <li>Cloud-native CI/CD workflows</li>
-      </ul>
-    </section>
+  <section class="contact">
+    <h3>Contact</h3>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:abhinsv2001@gmail.com">abhinsv2001@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abhin-sv" target="_blank" rel="noopener noreferrer">linkedin.com/in/abhin-sv</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Abhin-sv" target="_blank" rel="noopener noreferrer">github.com/Abhin-sv</a></li>
+    </ul>
+  </section>
 
-    <section id="certifications" tabindex="0">
-      <h3>Certifications</h3>
-      <p>Coming soon! Stay tuned as I complete my DevOps and cloud certifications.</p>
-    </section>
+  <div class="footer">
+    &copy; 2025 Abhin SV &middot; DevOps Engineer in the Making 🚀
+  </div>
 
-    <section id="contact" tabindex="0">
-      <h3>Contact</h3>
-      <ul class="contact-list">
-        <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:abhinsv2001@gmail.com">abhinsv2001@gmail.com</a></li>
-        <li><i class="fa-brands fa-linkedin"></i> <strong>LinkedIn:</strong> <a
+</body>
+</html>
