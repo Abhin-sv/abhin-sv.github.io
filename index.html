@@ -21,7 +21,6 @@
       color: #003366;
       font-size: 2.8em;
       margin-bottom: 0;
-      text-decoration: none;
     }
 
     h2 {
@@ -54,7 +53,6 @@
       padding-bottom: 6px;
       font-weight: 600;
       line-height: 1.2;
-      white-space: pre-line; /* allows line breaks */
     }
 
     h3::after {
@@ -100,22 +98,8 @@
       color: #555;
     }
 
-    .badge {
+    .badge, .badge1 {
       display: inline-block;
-      background-color: #cce0ff;
-      color: #003366;
-      padding: 6px 14px;
-      border-radius: 25px;
-      margin: 5px 6px 5px 0;
-      font-size: 1em;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: default;
-    }
-    .badge1 {
-      display: inline-block;
-      background-color: #cce0ff;
-      color: #006650;
       padding: 6px 14px;
       border-radius: 25px;
       margin: 5px 6px 5px 0;
@@ -125,12 +109,23 @@
       cursor: default;
     }
 
+    .badge {
+      background-color: #cce0ff;
+      color: #003366;
+    }
+
+    .badge1 {
+      background-color: #50deeb;
+      color: #006650;
+    }
+
     .badge:hover {
       background-color: #003366;
       color: #cce0ff;
     }
-      .badge1:hover {
-      background-color: #006650;
+
+    .badge1:hover {
+      background-color: #50deeb;
       color: #00ffc8;
     }
 
@@ -149,16 +144,41 @@
     section.contact {
       background-color: #f0f0f0;
     }
+
+    .experience-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .experience-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .experience-item span:first-child {
+      flex-shrink: 0;
+      display: inline-block;
+      border-bottom: 2px solid black;
+      padding-bottom: 3px;
+    }
+
+    .badge1 {
+      margin-left: 100px;
+      background-color: #eee;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
 
-
   <section>
     <h1>Abhin SV</h1>
-
     <h2>DevOps Engineer</h2> <br>
-     <h3><i>About Me</i></h3>
+    <h3><i>About Me</i></h3>
     <p>
       I'm a DevOps enthusiast with a strong foundation in Linux and Windows system administration.
       Passionate about cloud computing, automation, and streamlining software delivery. 
@@ -169,32 +189,50 @@
   <section class="skills">
     <h3>Technical Skills</h3>
     <div>
-      <span class="badge">Linux</span>
+      <span class="badge">Linux System Administration</span>
       <span class="badge">Networking (CCNA basics)</span>
+      <span class="badge">Networking Protocols (TCP/IP, DNS, DHCP)</span>
       <span class="badge">AWS CloudWindows Server</span>
+      <span class="badge">Cloud Platforms (AWS, Azure)</span>
       <span class="badge">Docker</span>
       <span class="badge">Kubernetes</span>
       <span class="badge">Terraform</span>
       <span class="badge">Ansible</span>
       <span class="badge">Python</span>
       <span class="badge">Bash Scripting</span>
+      <span class="badge">PowerShell Scripting</span>
       <span class="badge">CI/CD (GitHub Actions, Jenkins)</span>
       <span class="badge">Monitoring (Prometheus, Grafana)</span>
       <span class="badge">Git & GitHub</span>
       <span class="badge">Shell Scripting</span>
-      <span class="badge"></span>
     </div>
   </section>
-  
-   <section>
+
+  <section>
     <h3>Work Experience</h3>
-    <ul>
-      <li><strong>System Administrator</strong> – Caits Info Solutions Kochi</li>
-      <span class="badge1">December 2024 - present</span>
-      <li><strong>Linux Server Administrator</strong> – Hashroot Private Solutions</li>
-      <span class="badge1">July 2024 - September 2024</span>
-      <li><strong>Network Support Engineer</strong> – Syynefo Solutions (2020)</li>
-      <span class="badge1">January 2024 - April 2024</span>
+    <ul class="experience-list">
+      <li class="experience-item">
+        <span><strong>System Administrator</strong> – Caits Info Solutions Kochi</span>
+        <span class="badge1">December 2024 - present</span>
+      </li>
+     <i> <span><b>Worked at Cochin International Airport ATC Tower</b></span></i>
+      <li><em>* Administering Windows and Linux servers, ensuring high availability and security.</em></li>
+      <li><em>* Implementing user access controls, patch management, and system backups.</em></li>
+      <li><em>* Implemented system monitoring tools to track performance and reduce downtime</em></li>
+      <li class="experience-item">
+        <span><strong>Linux Server Administrator</strong> – Hashroot Private Solutions</span>
+        <span class="badge1">July 2024 - September 2024</span>
+      </li>
+      <li><em>* Assisted in configuring and maintaining Linux-based servers and virtual machines.</em></li>
+      <li><em>* Supported automation of routine server management tasks using shell scripts.</em></li>
+      <li><em>* Monitored server performance and participated in basic troubleshooting and log analysis.</em></li>
+      <li class="experience-item">
+        <span><strong>Network Support Engineer</strong> – Syynefo Solutions (2020)</span>
+        <span class="badge1">January 2024 - April 2024</span>
+      </li>
+      <li><em>* Provided support for LAN/WAN configurations and network performance monitoring.</em></li>
+      <li><em>* Troubleshot network-related issues and ensured minimal downtime.</em></li>
+      <li><em>* Gained hands-on experience with switches, routers, and firewall configurations.</em></li>
     </ul>
   </section>
 
@@ -216,7 +254,7 @@
       <li><b>ASAP</b> <i>(Additional Skill Acquisition Programme Kerala)</i></li>
     </ul>
   </section>
-  
+
   <section>
     <h3>Currently Learning</h3>
     <ul>
@@ -235,56 +273,48 @@
       <li><strong>GitHub:</strong> <a href="https://github.com/Abhin-sv" target="_blank" rel="noopener noreferrer">https://github.com/Abhin-sv</a></li>
     </ul>
   </section>
-  
-  
-<style>
-  /* Container positioned at bottom center inside the page */
-  #download-resume {
-    display: inline-block;
-    margin: 50px auto 20px auto; /* some space from bottom */
-    background-color: #007bff;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
 
-    /* Animation on load */
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeSlideUp 1s ease forwards;
-    animation-delay: 0.3s;
-  }
-
-  /* Keyframes for fade in + slide up */
-  @keyframes fadeSlideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  <style>
+    #download-resume {
+      display: inline-block;
+      margin: 50px auto 20px auto;
+      background-color: #007bff;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
-  }
 
-  /* Hover effect */
-  #download-resume:hover {
-    background-color: #0056b3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  /* Center the container horizontally */
-  .resume-container {
-    text-align: center;
-  }
-</style>
+    #download-resume:hover {
+      background-color: #0056b3;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
 
-<!-- Wrap the button in a container div -->
-<div class="resume-container">
-  <a href="Abhin_sv.pdf" download="Abhin_sv_Resume.pdf" id="download-resume">
-    Download Resume
-  </a>
-</div>
+    .resume-container {
+      text-align: center;
+    }
+  </style>
+
+  <div class="resume-container">
+    <a href="Abhin_sv.pdf" download="Abhin_sv_Resume.pdf" id="download-resume">
+      Download Resume
+    </a>
+  </div>
 
   <div class="footer">
     &copy; 2025 Abhin SV &middot; DevOps Engineer
